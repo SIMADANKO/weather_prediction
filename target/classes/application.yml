@@ -13,7 +13,6 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # HikariCP 是 Spring Boot 默认的数据源池，不需要额外配置
   jackson:
     property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
     default-property-inclusion: ALWAYS
@@ -23,17 +22,6 @@ spring:
     multipart:
       max-file-size: 500MB
       max-request-size: 500MB
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    password:
-    database: 2
-    lettuce:
-      pool:
-        max-idle: 30
-        min-idle: 10
-        max-active: 30
-        max-wait: 10000
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
@@ -45,5 +33,7 @@ mybatis-plus:
     lazy-loading-enabled: true
     aggressive-lazy-loading: false
     use-generated-keys: true
+
+
 
 

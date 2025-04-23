@@ -41,22 +41,21 @@ public class RainfallPredictionService {
 
     /**
      * 预测降雨量
+     *
      * @param input 模型输入特征数组，例如 [temperature, humidity, pressure]
      * @return 预测的降雨量（浮点数）
      * @throws OrtException 如果推理过程中发生错误
      */
     public float predictRainfall(float[] input) throws OrtException {
-        // 假设模型输入为 1 维浮点数数组，形状为 [1, input.length]
         long[] inputShape = new long[]{1, input.length};
 
-        // 创建 ONNX Tensor
         try (OnnxTensor inputTensor = OnnxTensor.createTensor(env, FloatBuffer.wrap(input), inputShape)) {
-            // 运行推理
-            OrtSession.Result result = session.run(Collections.singletonMap("input", inputTensor));
+            OrtSession.Result result = session.run(Collections.singletonMap("float_input", inputTensor));
 
-            // 假设模型输出为单个浮点数（降雨量），根据你的模型调整输出解析
-            float[] output = (float[]) result.get(0).getValue();
-            return output[0];
+            // 修正：强转为 float[][] 而不是 float[]
+            float[][] output = (float[][]) result.get(0).getValue();
+
+            return output[0][0]; // 返回预测值
         } catch (OrtException e) {
             logger.severe("Failed to run inference: " + e.getMessage());
             throw e;
