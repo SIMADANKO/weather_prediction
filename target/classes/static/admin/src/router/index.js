@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import index from '../views/index.vue';
 import login from '../views/login.vue';
 import forgot from '../views/forgot.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -363,6 +364,15 @@ const routes = [
                 title: '降雨量数据详情'
             }
         },
+        {
+            path: '/rainfall_forecast/view',
+            name: 'rainfall_forecast_view',
+            component: () => import('../views/rainfall_forecast/view.vue'),
+            meta: {
+              index: 0,
+              title: '降雨预测'
+            }
+          },
 						    			// 操作日志路由
 		{
 		    path: '/operation_log/table',

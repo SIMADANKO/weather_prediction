@@ -69,6 +69,13 @@
                       <el-menu-item v-show="user_group == '管理员' || $check_action('/slides/table')" index="/slides/table" @click="handleButtonClick(1)">
             <span>轮播图管理</span>
           </el-menu-item>
+          <el-menu-item
+  v-show="user_group == '管理员' || $check_action('/rainfall_forecast/view')"
+  index="/rainfall_forecast/view"
+  @click="handleButtonClick(1)"
+>
+  <span>预测降雨量</span>
+</el-menu-item>
                         
         </el-submenu>
 
