@@ -7,6 +7,11 @@ import forgot from '../views/forgot.vue';
 Vue.use(VueRouter)
 
 const routes = [
+    {
+        path: '/rainfall_forecast/NewView',
+        name: 'RainfallForecastNew',
+        component: () => import('../views/rainfall_forecast/NewView.vue')
+    },
     // 主页
     {
         path: '/',

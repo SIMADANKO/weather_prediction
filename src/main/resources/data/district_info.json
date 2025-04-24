@@ -1,0 +1,42 @@
+{
+  "乐昌市": {
+    "district_code": 0,
+    "cluster": 1
+  },
+  "乳源瑶族自治县": {
+    "district_code": 1,
+    "cluster": 1
+  },
+  "仁化县": {
+    "district_code": 2,
+    "cluster": 1
+  },
+  "南雄市": {
+    "district_code": 3,
+    "cluster": 1
+  },
+  "始兴县": {
+    "district_code": 4,
+    "cluster": 0
+  },
+  "新丰县": {
+    "district_code": 5,
+    "cluster": 0
+  },
+  "曲江区": {
+    "district_code": 6,
+    "cluster": 0
+  },
+  "武江区": {
+    "district_code": 7,
+    "cluster": 1
+  },
+  "浈江区": {
+    "district_code": 8,
+    "cluster": 1
+  },
+  "翁源县": {
+    "district_code": 9,
+    "cluster": 0
+  }
+}

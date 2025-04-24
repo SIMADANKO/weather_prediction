@@ -70,8 +70,8 @@
             <span>轮播图管理</span>
           </el-menu-item>
           <el-menu-item
-  v-show="user_group == '管理员' || $check_action('/rainfall_forecast/view')"
-  index="/rainfall_forecast/view"
+  v-show="user_group == '管理员' || $check_action('/rainfall_forecast/NewView')"
+  index="/rainfall_forecast/NewView"
   @click="handleButtonClick(1)"
 >
   <span>预测降雨量</span>
